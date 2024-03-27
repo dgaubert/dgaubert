@@ -21,6 +21,6 @@ Visit my personal web site: [dgaubert.com](https://dgaubert.com)
 
 Or reach me out on:
 
-<a href="https://twitter.com/danigaubert"><img alt="Twitter" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a> 
-<a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a>
+<a href="https://twitter.com/danigaubert"><img alt="Twitter" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a> &nbsp;
+<a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a> &nbsp;
 <a href="mailto:danielgarciaaubert@gmail.com"><img alt="Gmail" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.12.2/icons/gmail.svg"/></a>
