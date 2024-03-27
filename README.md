@@ -17,10 +17,10 @@ Experienced Software Engineer with 18 years of expertise in web development. See
 <a href="https://github.com/harish-sethuraman/readme-components"><img  src="https://readme-components.vercel.app/api?component=logo&fill=222222&logo=rust&svgfill=ffffff"></a>
 </p>
 
-Visit my personal web site: [dgaubert.com](https://dgaubert.com), or reach me out on:
+Visit my personal web site: [dgaubert.com](https://dgaubert.com)
 
-<p align="left" style="margin-top:60px">
-<a href="https://twitter.com/danigaubert"><img alt="Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a> 
-<a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a>
-<a href="mailto:danielgarciaaubert@gmail.com"><img alt="Gmail" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.12.2/icons/gmail.svg"/></a>
-</p>
+Or reach me out on:
+
+<a href="https://twitter.com/danigaubert"><img alt="Twitter" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a> 
+<a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a>
+<a href="mailto:danielgarciaaubert@gmail.com"><img alt="Gmail" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.12.2/icons/gmail.svg"/></a>
