@@ -17,9 +17,9 @@ Experienced Software Engineer with 18 years of expertise in web development. See
 <a href="https://github.com/harish-sethuraman/readme-components"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=rust&svgfill=000000&textfill=222222""></a>
 </p>
 
-Visit my personal web site: [dgaubert.com](https://dgaubert.com)
+#### Visit my personal web site: [dgaubert.com](https://dgaubert.com)
 
-Or reach me out on:
+#### Or reach me out on:
 
 <a href="https://twitter.com/danigaubert"><img alt="Twitter" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a> &nbsp;
 <a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a> &nbsp;
