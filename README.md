@@ -5,7 +5,7 @@ Experienced Software Engineer with 18 years of expertise in web development. See
 ### I use to work with:
 
 <p align="left">
-<a href="https://www.typescriptlang.org"></a>
+<a href="https://www.typescriptlang.org"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=typescript&svgfill=3178c6&textfill=222222"></a>
 <a href="https://developer.mozilla.org/es/docs/Web/JavaScript"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=javascript&svgfill=f7df1e&textfill=222222"></a>
 <a href="https://nodejs.org"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=node.js&svgfill=339933&textfill=222222"></a>
 <a href="https://vuejs.org"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=vue.js&svgfill=4fc08d&textfill=222222"></a>
