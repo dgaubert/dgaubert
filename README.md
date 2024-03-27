@@ -1,8 +1,8 @@
-# Hi! I'm Daniel García Aubert
+# I'm Daniel García Aubert
 
 Experienced Software Engineer with 18 years of expertise in web development. Seeking a challenging opportunity in the software industry to leverage experience and technical prowess to innovative projects and help teams to success.
 
-## I use to work with
+### I use to work with:
 
 <p align="left">
 <a href="https://github.com/harish-sethuraman/readme-components"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=typescript&svgfill=3178c6&textfill=222222"></a>
