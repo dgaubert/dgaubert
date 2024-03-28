@@ -15,7 +15,7 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
   const posts = props.data;
   return (
     <>
-      <Header />
+      <Header profile about />
       <main class="max-w-screen-sm mx-auto">
         <div class="pt-16 px-6">
           {posts.map((post) => <PostCard post={post} />)}

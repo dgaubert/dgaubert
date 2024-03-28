@@ -9,8 +9,8 @@ export const handler: Handlers<Post[]> = {
     const origin = url.origin;
     const copyright = `Copyright ${new Date().getFullYear()} ${origin}`;
     const feed = new Feed({
-      title: "Blog",
-      description: "This is a Fresh Blog",
+      title: "Daniel García Aubert",
+      description: "Software Engineer",
       id: `${origin}/blog`,
       link: `${origin}/blog`,
       language: "en",
@@ -19,10 +19,10 @@ export const handler: Handlers<Post[]> = {
       generator: "Feed (https://github.com/jpmonette/feed) for Deno",
       feedLinks: {
         atom: `${origin}/feed`,
-      },
+      }
     });
 
-    posts.map((post: Post) => {
+    posts.forEach((post: Post) => {
       const item: FeedItem = {
         id: `${origin}/${post.title}`,
         title: post.title,
@@ -39,7 +39,7 @@ export const handler: Handlers<Post[]> = {
     return new Response(atomFeed, {
       headers: {
         "content-type": "application/atom+xml; charset=utf-8",
-      },
+      }
     });
   }
 };

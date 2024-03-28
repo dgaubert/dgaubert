@@ -1,11 +1,11 @@
-import GhostIcon from "$tabler-icons/tsx/ghost-3.tsx";
+import FeedButton from "@/components/feed-button.tsx";
 
 export default function Footer() {
   return (
     <div class="max-w-screen-sm mx-auto flex my-14 px-6">
       <div class="w-1/2 h-12">
         <div class="flex items-center gap-1">
-          <GhostIcon class="inline-block" aria-hidden="true" />
+          <FeedButton />
           <div class="font-bold text-xl">
             Daniel García Aubert
           </div>
@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
       </div>
       <div class="w-1/2 h-12 text-right">
-        <div class="text-xs">
+        <div class="text-xs text-gray-500">
           Copyright © 2024<br />
           All right reserved.
         </div>
