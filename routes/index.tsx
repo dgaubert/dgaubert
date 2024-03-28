@@ -13,6 +13,7 @@ export const handler: Handlers<Post[]> = {
 
 export default function BlogIndexPage(props: PageProps<Post[]>) {
   const posts = props.data;
+
   return (
     <>
       <Header profile about />
