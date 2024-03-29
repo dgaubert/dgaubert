@@ -6,6 +6,7 @@ export default function PostCard(props: { post: Post }) {
   return (
     <div class="py-8">
       <a href={`/blog/${post.slug}`}>
+        <img class="mb-8" src={post.picture} />
         <h3 class="text-2xl font-bold mb-2">
           {post.title}
         </h3>
