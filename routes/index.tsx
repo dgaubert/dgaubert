@@ -16,7 +16,7 @@ export default function BlogIndexPage(props: PageProps<Post[]>) {
 
   return (
     <>
-      <Header profile about />
+      <Header about profile />
       <main class="max-w-screen-sm mx-auto">
         <div class="pt-16 px-6">
           {posts.map((post) => <PostCard post={post} />)}

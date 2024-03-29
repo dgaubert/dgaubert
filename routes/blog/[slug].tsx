@@ -3,8 +3,8 @@ import { Head } from "$fresh/runtime.ts";
 import { getPost, Post } from "@/utils/posts.ts";
 import { CSS, render } from "$gfm";
 import Footer from "@/components/footer.tsx";
-import FeedIcon from "$tabler-icons/tsx/rss.tsx";
 import Header from "@/components/header.tsx";
+import FeedButton from "@/components/feed-button.tsx";
 
 export const handler: Handlers<Post> = {
   async GET(_req, ctx) {
@@ -27,14 +27,13 @@ export default function PostPage(props: PageProps<Post>) {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
       <main class="max-w-screen-sm mx-auto px-6 pt-16">
+        <img class="mb-16" src={post.picture} />
         <h1 class="text-4xl font-bold">{post.title}</h1>
         <div class="pt-4">
-          <time class="text-gray-500 text-xl">
+          <time class="text-gray-500 text-xl pr-2">
             {publishedAt}
           </time>
-          <a href="/feed" class="inline-block px-2" aria-label="Feed">
-            <FeedIcon size={16} color="#6b7280"/>
-          </a>
+          <FeedButton size={16} color="#6b7280" />
         </div>
         <div
           class="mt-8 markdown-body"

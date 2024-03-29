@@ -7,6 +7,7 @@ export interface Post {
   slug: string;
   title: string;
   publishedAt: Date;
+  picture: string;
   snippet: string;
   content: string;
 }
@@ -32,6 +33,7 @@ export async function getPost(slug: string): Promise<Post | null> {
     slug,
     title: attrs.title as string,
     publishedAt: new Date(attrs.published_at as string),
+    picture: attrs.picture as string,
     content: body,
     snippet: attrs.snippet as string,
   };

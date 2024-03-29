@@ -2,7 +2,13 @@ import Navbar from "@/components/navbar.tsx";
 import Profile from "@/components/profile.tsx";
 import Social from "@/components/social.tsx";
 
-export default function Header(props: { profile?: boolean, backHome?: boolean, about?: boolean }) {
+interface Props {
+  profile?: boolean;
+  backHome?: boolean;
+  about?: boolean;
+};
+
+export default function Header(props: Props) {
   return (
     <header>
       <Navbar backHome={props.backHome} about={props.about} />

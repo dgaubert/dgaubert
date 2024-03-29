@@ -1,7 +1,12 @@
 import HomeButton from "@/components/home-button.tsx";
 import AboutButton from "@/components/about-button.tsx";
 
-export default function Navbar(props: { backHome?: boolean, about?: boolean}) {
+interface Props {
+  backHome?: boolean;
+  about?: boolean;
+};
+
+export default function Navbar(props: Props) {
   return (
     <div class="max-w-screen-sm mx-auto px-6 py-8 flex-1 flex flex-col">
       <nav class="flex justify-between">
