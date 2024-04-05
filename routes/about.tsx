@@ -8,7 +8,7 @@ import Footer from "@/components/footer.tsx";
 
 const DIRECTORY = "./pages";
 
-type Page = {
+interface Page {
   content: string;
 };
 
