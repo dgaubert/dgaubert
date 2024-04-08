@@ -17,7 +17,7 @@ Experienced Software Engineer with 18 years of expertise in web development. See
 <a href="https://www.rust-lang.org"><img  src="https://readme-components.vercel.app/api?component=logo&fill=f6f8fa&logo=rust&svgfill=000000&textfill=222222"></a>
 </p>
 
-#### Visit my personal web site: [dgaubert.com](https://dgaubert.com)
+#### Visit my personal web site: [dgaubert.dev](https://dgaubert.dev)
 
 #### Or reach me out on:
 
