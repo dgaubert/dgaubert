@@ -5,7 +5,7 @@ const { signIn: signInGithub, handleCallback: handleCallbackGithub } = createHel
   createGitHubOAuthConfig()
 );
 
-const redirectHost = Deno.env.get('DENO_ENV') === "production" ? "https://dgaubert.dev" : "http://localhost:8000"
+const redirectHost = Deno.env.get('ENVIRONMENT') === "production" ? "https://dgaubert.dev" : "http://localhost:8000"
 const redirectTwitterUri = `${redirectHost}/oauth/twitter/callback`
 
 const { signIn: signInTwitter, handleCallback: handleCallbackTwitter } = createHelpers(
