@@ -8,6 +8,7 @@ import * as $about from "./routes/about.tsx";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $feed from "./routes/feed.ts";
 import * as $index from "./routes/index.tsx";
+import * as $signin from "./routes/signin.tsx";
 
 import { type Manifest } from "$fresh/server.ts";
 
@@ -19,6 +20,7 @@ const manifest = {
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/feed.ts": $feed,
     "./routes/index.tsx": $index,
+    "./routes/signin.tsx": $signin,
   },
   islands: {},
   baseUrl: import.meta.url,

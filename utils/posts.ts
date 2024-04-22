@@ -13,22 +13,27 @@ export interface Post {
 }
 
 // Get posts.
-export async function getPosts(): Promise<Post[]> {
+export async function getPosts(sessionId?: string): Promise<Post[]> {
   const files = Deno.readDir(DIRECTORY);
   const promises = [];
   for await (const file of files) {
     const slug = file.name.replace(".md", "");
-    promises.push(getPost(slug));
+    promises.push(getPost(slug, sessionId));
   }
-  const posts = await Promise.all(promises) as Post[];
+  const posts = (await Promise.all(promises) as Post[]).filter(p => p !== null);
   posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
   return posts;
 }
 
 // Get post.
-export async function getPost(slug: string): Promise<Post | null> {
+export async function getPost(slug: string, sessionId?: string): Promise<Post | null> {
   const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
   const { attrs, body } = extract(text);
+
+  if (attrs.private && !sessionId) {
+    return null
+  }
+
   return {
     slug,
     title: attrs.title as string,

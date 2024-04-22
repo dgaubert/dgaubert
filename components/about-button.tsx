@@ -1,4 +1,4 @@
-import AboutIcon from "$tabler-icons/tsx/user-circle.tsx";
+import AboutIcon from "$tabler-icons/tsx/info-circle.tsx"
 
 export default function AboutButton() {
   return (

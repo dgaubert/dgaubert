@@ -5,24 +5,38 @@ import { CSS, render } from "$gfm";
 import Footer from "@/components/footer.tsx";
 import Header from "@/components/header.tsx";
 import FeedButton from "@/components/feed-button.tsx";
+import { getSessionId } from "@/plugins/oauth.ts"
 
-export const handler: Handlers<Post> = {
-  async GET(_req, ctx) {
+interface PageData {
+  post: Post
+  sessionId?: string
+}
+
+export const handler: Handlers<PageData> = {
+  async GET(req, ctx) {
     try {
-      const post = await getPost(ctx.params.slug);
-      return ctx.render(post as Post);
+      const slug = ctx.params.slug
+      const sessionId = await getSessionId(req)
+      const post = await getPost(slug, sessionId);
+
+      if (!post) {
+        return ctx.renderNotFound();
+      }
+
+      return ctx.render({ post: post as Post, sessionId });
     } catch {
       return ctx.renderNotFound();
     }
   }
 };
 
-export default function PostPage(props: PageProps<Post>) {
-  const post = props.data;
+export default function PostPage(props: PageProps<PageData>) {
+  const post = props.data.post;
+  const sessionId = props.data.sessionId
   const publishedAt = new Date(post.publishedAt).toLocaleDateString("en-us", { year: "numeric", month: "long", day: "numeric", });
   return (
     <>
-      <Header backHome />
+      <Header backHome social sessionId={sessionId}/>
       <Head>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>

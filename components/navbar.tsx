@@ -1,9 +1,12 @@
 import HomeButton from "@/components/home-button.tsx";
 import AboutButton from "@/components/about-button.tsx";
+import SigninButton from "@/components/signin-button.tsx";
+import SignoutButton from "@/components/signout-button.tsx";
 
 interface Props {
   backHome?: boolean;
   about?: boolean;
+  sessionId?: string
 };
 
 export default function Navbar(props: Props) {
@@ -16,8 +19,11 @@ export default function Navbar(props: Props) {
           </li>
         </ul>
         <ul class="flex items-center">
-          <li>
+          <li class="pr-2">
             {props.about && <AboutButton />}
+          </li>
+          <li>
+            { props.sessionId ? <SignoutButton /> : <SigninButton /> }
           </li>
         </ul>
       </nav>

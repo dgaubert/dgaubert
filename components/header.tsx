@@ -6,14 +6,16 @@ interface Props {
   profile?: boolean;
   backHome?: boolean;
   about?: boolean;
+  social?: boolean;
+  sessionId?: string;
 };
 
 export default function Header(props: Props) {
   return (
     <header>
-      <Navbar backHome={props.backHome} about={props.about} />
+      <Navbar backHome={props.backHome} about={props.about} sessionId={props.sessionId} />
       {props.profile && <Profile />}
-      <Social />
+      {props.social &&  <Social />}
     </header>
   )
 }
