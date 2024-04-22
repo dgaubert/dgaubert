@@ -1,4 +1,4 @@
-import { createGitHubOAuthConfig, createTwitterOAuthConfig, createGoogleOAuthConfig, createFacebookOAuthConfig, createHelpers } from "jsr:@deno/kv-oauth";
+import { createGitHubOAuthConfig, createTwitterOAuthConfig, createGoogleOAuthConfig, createHelpers } from "jsr:@deno/kv-oauth";
 import type { Plugin } from "$fresh/server.ts";
 
 const { signIn: signInGithub, handleCallback: handleCallbackGithub } = createHelpers(
