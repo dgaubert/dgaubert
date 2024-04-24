@@ -7,7 +7,8 @@
     "start": "deno run -A --unstable-kv --watch=static/,routes/ dev.ts",
     "build": "GITHUB_CLIENT_ID=fake GITHUB_CLIENT_SECRET=fake TWITTER_CLIENT_ID=fake TWITTER_CLIENT_SECRET=fake GOOGLE_CLIENT_ID=fake GOOGLE_CLIENT_SECRET=fake deno run -A --unstable-kv dev.ts build",
     "preview": "deno run -A main.ts",
-    "update": "deno run -A -r https://fresh.deno.dev/update ."
+    "update": "deno run -A -r https://fresh.deno.dev/update .",
+    "session-count": "deno run -A --unstable-kv scripts/session-count.ts"
   },
   "lint": {
     "rules": {
