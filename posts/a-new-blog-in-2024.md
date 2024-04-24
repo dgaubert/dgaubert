@@ -17,7 +17,7 @@ This blog will mostly focus on software development. However, I want to keep tra
 
 ### 2. Learn Deno, Deno Deploy, and the Fresh framework
 
-I love to learn by doing. I've been following the progress of Deno from the very beginning because I'm a big fan of Ryan Dahl's work since Node.js. A blog is the perfect use case for Deno Deploy with Fresh, and this is the right moment to give it a try. As a software engineer who has spent most of my career working on the backend side, my goal is to improve my frontend skills. I've learned modern frameworks lately, such as Vue.js and React, so Fresh is not unfamiliar to me as it uses Preact under the hood. However, I still struggle with designing usable and simple UIs and dealing with CSS.
+I love to learn by doing. I've been following the progress of [Deno](https://deno.com/) from the very beginning because I'm a big fan of [Ryan Dahl](https://tinyclouds.org/)'s work since [Node.js](https://nodejs.org/). A blog is the perfect use case for [Deno Deploy](https://deno.com/deploy) with [Fresh](https://fresh.deno.dev/), and this is the right moment to give it a try. As a software engineer who has spent most of my career working on the backend side, my goal is to improve my frontend skills. I've learned modern frameworks lately, such as [Vue.js](https://vuejs.org/) and [React](https://react.dev/), so Fresh is not unfamiliar to me as it uses [Preact](https://preactjs.com/) under the hood. However, I still struggle with designing usable and simple UIs and dealing with CSS.
 
 ### 3. Have control over my own data
 
@@ -27,7 +27,7 @@ I have plans to make this place my own social media platform, where I share my t
 
 ### 4. Improve my English and writing skills
 
-Although I consider myself fluent in English, I'm aware there is a lot of room for improvement. That's the main reason for running this blog in English; I want to push my English to the next level. I learned English because I needed to develop my professional career, so I feel more comfortable in a technical conversation than a casual one. I need to learn some jargon because sometimes it's hard for me to follow native speakers using slang or having accents other than GenAm. 
+Although I consider myself fluent in English, I'm aware there is a lot of room for improvement. That's the main reason for running this blog in English; I want to push my English to the next level. I learned English because I needed to develop my professional career, so I feel more comfortable in a technical conversation than a casual one. I need to learn some jargon because sometimes it's hard for me to follow native speakers using slang or having accents other than [GenAm](https://en.wikipedia.org/wiki/General_American_English). 
 
 Some personal content will be in Spanish, as most of my relatives and friends are from Spain. I'm still considering having everything translated into Spanish and keeping two versions of the blog, but for now, I think it's not worth it.
 
