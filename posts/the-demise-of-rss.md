@@ -3,7 +3,8 @@ title: The Demise of RSS, Understanding the Factors Behind its Decline
 published_at: 2024-03-27T10:00:00.000Z
 picture: /rss.jpeg
 snippet: In the early 2000s, Really Simple Syndication (RSS) revolutionized the way people consumed online content. It offered a convenient way to aggregate updates from multiple websites in one place, providing users with a streamlined browsing experience. However, despite its initial popularity, RSS has seen a decline in usage over the years. In this blog post, we'll explore the reasons behind the death of RSS and what this means for the future of content consumption.
-private: true
+private: false
+draft: true
 ---
 
 In the early 2000s, Really Simple Syndication (RSS) revolutionized the way people consumed online content. It offered a convenient way to aggregate updates from multiple websites in one place, providing users with a streamlined browsing experience. However, despite its initial popularity, RSS has seen a decline in usage over the years. In this blog post, we'll explore the reasons behind the death of RSS and what this means for the future of content consumption.

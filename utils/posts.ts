@@ -12,7 +12,7 @@ export interface Post {
   content: string;
 }
 
-// Get posts.
+// Get posts
 export async function getPosts(sessionId?: string): Promise<Post[]> {
   const files = Deno.readDir(DIRECTORY);
   const promises = [];
@@ -25,10 +25,14 @@ export async function getPosts(sessionId?: string): Promise<Post[]> {
   return posts;
 }
 
-// Get post.
+// Get post
 export async function getPost(slug: string, sessionId?: string): Promise<Post | null> {
   const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
   const { attrs, body } = extract(text);
+
+  if (attrs.draft) {
+    return null
+  }
 
   if (attrs.private && !sessionId) {
     return null

@@ -11,4 +11,4 @@
 
 # Roadmap
 
-1. User signup/login/session (deno )
+- [x] 1. User signup/login/session (deno) 

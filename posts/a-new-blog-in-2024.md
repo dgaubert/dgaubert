@@ -1,26 +1,38 @@
 ---
-title: Why Start a New Blog in 2024, Navigating the Digital Landscape
-published_at: 2024-03-26T10:00:00.000Z
+title: Why Start a New Blog in 2024
+published_at: 2024-04-24T10:00:00.000Z
 picture: /blog.jpeg
-snippet: In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. However, the landscape of digital content creation is constantly evolving, presenting new opportunities and challenges for creators. As a software engineer, you possess a unique set of skills and perspectives that can make your blog stand out in 2024.
+snippet: In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. As a software engineer, I have the ability to create a place for myself, fully customizable, and share information with others granularly. 
 private: false
+draft: false
 ---
 
-In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. However, the landscape of digital content creation is constantly evolving, presenting new opportunities and challenges for creators. As a software engineer, you possess a unique set of skills and perspectives that can make your blog stand out in 2024. Here are some compelling reasons why starting a new blog this year could be a strategic move:
+In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. As a software engineer, I have the ability to create a place for myself, fully customizable, and share information with others granularly. Here are some personal reasons why starting a new blog could be a cool thing to do in 2024:
 
-1. Authenticity in a Crowded Space:
-With the proliferation of content across various platforms, authenticity has become a rare commodity. Many readers are yearning for genuine, well-researched, and thoughtful content that adds value to their lives. Starting a new blog allows you to carve out your niche and establish your voice without the noise and distractions often associated with larger platforms.
+### 1. Keep track of ideas, learnings, and readings over time
 
-2. Diversification of Online Presence:
-While social media platforms offer visibility, they also come with limitations and algorithmic changes that can affect your reach. By owning a blog, you have control over your content and its distribution. It serves as a centralized hub where you can showcase your expertise, portfolio, and personal brand, complementing your presence on other platforms.
+Shame on me for not having started a blog 20 years earlier. I know, I've lost an uncountable number of thoughts, useful software tricks, and learnings. Hopefully, I can recover some and write them down here, but valuable nuggets of knowledge are completely lost. I will use this blog to save useful bash commands, algorithms, tools, etc., and find them easily in a public place.
 
-3. Long-term Investment:
-Unlike ephemeral social media posts, blog content has a longer lifespan and can continue to attract readers over time through organic search traffic. By consistently publishing high-quality articles, you're not only building a library of valuable resources but also positioning yourself as an authority in your field. Over time, this can lead to opportunities for monetization, partnerships, and career advancement.
+This blog will mostly focus on software development. However, I want to keep track of my thoughts and ideas on any other topic. I'm really into astrophysics, and I enjoy learning more about science: the origin of the universe, quantum mechanics, and string theory. Very occasionally, I will share my opinions about politics, socioeconomic issues, and news from where I live: Spain. 
 
-4. Technical Skills Development:
-As a software engineer, blogging offers a platform to showcase your technical skills, share coding tutorials, discuss industry trends, or even contribute to open-source projects. Writing about your experiences, challenges, and solutions can also enhance your communication skills and foster a sense of community within the developer ecosystem.
+### 2. Learn Deno, Deno Deploy, and the Fresh framework
 
-5. Adaptability to Emerging Trends:
-The digital landscape is constantly evolving with new technologies, trends, and paradigms. Starting a new blog allows you to stay agile and adapt to these changes, experimenting with different formats, topics, and strategies to engage your audience. Whether it's through multimedia content, interactive features, or leveraging emerging platforms, you have the flexibility to innovate and evolve your blog over time.
+I love to learn by doing. I've been following the progress of Deno from the very beginning because I'm a big fan of Ryan Dahl's work since Node.js. A blog is the perfect use case for Deno Deploy with Fresh, and this is the right moment to give it a try. As a software engineer who has spent most of my career working on the backend side, my goal is to improve my frontend skills. I've learned modern frameworks lately, such as Vue.js and React, so Fresh is not unfamiliar to me as it uses Preact under the hood. However, I still struggle with designing usable and simple UIs and dealing with CSS.
 
-In conclusion, while the digital landscape may be saturated with content, there's still ample opportunity for those willing to invest in creating valuable and authentic experiences. As a software engineer, your unique perspective and technical expertise position you to succeed in the blogosphere. By starting a new blog in 2024, you're not just joining the conversation – you're shaping it, one post at a time.
+### 3. Have control over my own data
+
+I know, just having a personal website doesn't give you control of your personal data. Just owning a smartphone means you are sharing your most valuable information: your location. I want to keep my personal thoughts under control at least. Meanwhile, I will post part of the content of this blog on social media to gain some traction; the idea is to drive people to this blog. 
+
+I have plans to make this place my own social media platform, where I share my thoughts about what's happening in the world, pictures, and memes. There will be three types of audiences: anonymous visitors, followers, and friends. While most of the content of this blog will be publicly available to anonymous visitors, personal information will remain accessible only to followers, family, and friends.
+
+### 4. Improve my English and writing skills
+
+Although I consider myself fluent in English, I'm aware there is a lot of room for improvement. That's the main reason for running this blog in English; I want to push my English to the next level. I learned English because I needed to develop my professional career, so I feel more comfortable in a technical conversation than a casual one. I need to learn some jargon because sometimes it's hard for me to follow native speakers using slang or having accents other than GenAm. 
+
+Some personal content will be in Spanish, as most of my relatives and friends are from Spain. I'm still considering having everything translated into Spanish and keeping two versions of the blog, but for now, I think it's not worth it.
+
+### 5. Force myself to keep updated with the latest trends
+
+The software industry evolves continuously, and it's hard to stay updated with the latest languages, frameworks, products, or technologies. AI has exploded in the last two years, for example. When you are working in a software company, you are focused on the languages, frameworks, and tools that your team uses, and you quickly become outdated on new trends. The last, but not least, goal of this blog is to force myself to keep an eye on what's happening in the software industry. Nowadays, I'm pretty curious about how we can use AI in software products and implement features that make users' lives better. Additionally, I will need to find inspiration to maintain a blog. Reading someone else's blog or a newsletter is mandatory.
+
+I don't know how long I'm going to continue putting effort into adding content to this blog. In five years, I'd like to look back and see this place full of posts that are not just useful for me but also for others.
