@@ -11,4 +11,11 @@
 
 # Roadmap
 
-- [x] 1. User signup/login/session (deno) 
+- [x] User signup/login/session (deno)
+- [ ] Get email from session data
+- [ ] Type of posts: blog, picture, micro
+
+# Content
+
+- Post about deno, deno deploy and fresh
+- Why I workout every day
