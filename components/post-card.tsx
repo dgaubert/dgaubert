@@ -51,7 +51,7 @@ export default function PostCard(props: { post: Post }) {
           {publishedAt}
         </time>
         <div class="mt-4 text-gray-900">
-          {strip(micro.content)}
+          {strip(micro.snippet)}
         </div>
       </a>
     </div>

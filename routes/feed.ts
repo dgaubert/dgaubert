@@ -63,7 +63,7 @@ export const handler: Handlers<Post[]> = {
       item = {
         id: `${origin}/${micro.title}`,
         title: micro.title,
-        description: strip(micro.content),
+        description: micro.snippet,
         date: post.publishedAt,
         link: `${origin}/micro/${micro.slug}`,
         copyright,

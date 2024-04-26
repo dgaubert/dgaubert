@@ -32,6 +32,7 @@ export interface Micro {
   slug: string;
   title: string;
   publishedAt: Date;
+  snippet: string;
   content: string;
   type: MicroType;
 }
@@ -95,6 +96,7 @@ export async function getPost(slug: string, sessionId?: string): Promise<Post | 
     title: attrs.title as string,
     publishedAt: new Date(attrs.published_at as string),
     content: body,
+    snippet: attrs.snippet as string,
     type
   };
 }
