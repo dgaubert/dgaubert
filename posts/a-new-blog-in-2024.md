@@ -5,6 +5,7 @@ picture: /blog.jpeg
 snippet: In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. As a software engineer, I have the ability to create a place for myself, fully customizable, and share information with others granularly. 
 private: false
 draft: false
+type: blog
 ---
 
 In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. As a software engineer, I have the ability to create a place for myself, fully customizable, and share information with others granularly. Here are some personal reasons why starting a new blog could be a cool thing to do in 2024:

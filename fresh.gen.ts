@@ -8,6 +8,8 @@ import * as $about from "./routes/about.tsx";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $feed from "./routes/feed.ts";
 import * as $index from "./routes/index.tsx";
+import * as $micro_slug_ from "./routes/micro/[slug].tsx";
+import * as $picture_slug_ from "./routes/picture/[slug].tsx";
 import * as $signin from "./routes/signin.tsx";
 
 import { type Manifest } from "$fresh/server.ts";
@@ -20,6 +22,8 @@ const manifest = {
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/feed.ts": $feed,
     "./routes/index.tsx": $index,
+    "./routes/micro/[slug].tsx": $micro_slug_,
+    "./routes/picture/[slug].tsx": $picture_slug_,
     "./routes/signin.tsx": $signin,
   },
   islands: {},

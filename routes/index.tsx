@@ -1,4 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
+import { Head } from "$fresh/runtime.ts";
+import { CSS } from "@deno/gfm";
 import { getPosts, Post } from "@/utils/posts.ts";
 import Header from "@/components/header.tsx"
 import PostCard from "@/components/post-card.tsx"
@@ -25,6 +27,9 @@ export default function BlogIndexPage(props: PageProps<PageData>) {
   return (
     <>
       <Header about profile social sessionId={sessionId} />
+      <Head>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      </Head>
       <main class="max-w-screen-sm mx-auto">
         <div class="pt-16 px-6">
           {posts.map((post) => <PostCard post={post} />)}

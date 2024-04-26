@@ -1,6 +1,7 @@
 import { Handlers } from "$fresh/server.ts";
-import { getPosts, Post } from "@/utils/posts.ts";
+import { getPosts, Post, Blog, Picture, Micro } from "@/utils/posts.ts";
 import { Feed, type Item as FeedItem } from "feed";
+import { strip } from "@deno/gfm";
 
 export const handler: Handlers<Post[]> = {
   async GET(req, _ctx) {
@@ -23,15 +24,52 @@ export const handler: Handlers<Post[]> = {
     });
 
     posts.forEach((post: Post) => {
-      const item: FeedItem = {
-        id: `${origin}/${post.title}`,
-        title: post.title,
-        description: post.snippet,
+      let item: FeedItem
+
+      if (post.type === "blog") {
+        const blog = post as Blog
+        item = {
+          id: `${origin}/${blog.title}`,
+          title: blog.title,
+          description: blog.snippet,
+          date: blog.publishedAt,
+          link: `${origin}/blog/${blog.slug}`,
+          copyright,
+          published: blog.publishedAt,
+        }
+        feed.addItem(item);
+        return
+      }
+
+      if (post.type === "picture") {
+        const picture = post as Picture
+
+        item = {
+          id: `${origin}/${picture.title}`,
+          title: picture.title,
+          description: strip(picture.content),
+          date: picture.publishedAt,
+          link: `${origin}/picture/${picture.slug}`,
+          copyright,
+          published: picture.publishedAt,
+        }
+
+        feed.addItem(item);
+        return
+      }
+
+      const micro = post as Micro
+
+      item = {
+        id: `${origin}/${micro.title}`,
+        title: micro.title,
+        description: strip(micro.content),
         date: post.publishedAt,
-        link: `${origin}/${post.slug}`,
+        link: `${origin}/micro/${micro.slug}`,
         copyright,
-        published: post.publishedAt,
+        published: micro.publishedAt,
       };
+
       feed.addItem(item);
     });
 

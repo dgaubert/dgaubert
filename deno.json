@@ -23,11 +23,11 @@
   ],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
-    "$gfm": "https://deno.land/x/gfm@0.6.0/mod.ts",
     "$std/": "https://deno.land/std@0.216.0/",
     "$tabler-icons/": "https://deno.land/x/tabler_icons_tsx@0.0.6/",
     "./": "./",
     "@/": "./",
+    "@deno/gfm": "jsr:@deno/gfm@^0.8.0",
     "@deno/kv-oauth": "jsr:@deno/kv-oauth@^0.11.0",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",

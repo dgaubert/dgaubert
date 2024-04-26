@@ -3,14 +3,40 @@ import { join } from "$std/path/mod.ts";
 
 const DIRECTORY = "./posts";
 
-export interface Post {
+type BlogType = "blog";
+type PictureType = "picture";
+type MicroType = "micro"
+
+type PostType = BlogType | PictureType | MicroType
+
+export interface Blog {
   slug: string;
   title: string;
   publishedAt: Date;
   picture: string;
   snippet: string;
   content: string;
+  type: BlogType;
 }
+
+export interface Picture {
+  slug: string;
+  title: string;
+  publishedAt: Date;
+  picture: string;
+  content: string;
+  type: PictureType;
+}
+
+export interface Micro {
+  slug: string;
+  title: string;
+  publishedAt: Date;
+  content: string;
+  type: MicroType;
+}
+
+export type Post = Blog | Picture | Micro
 
 // Get posts
 export async function getPosts(sessionId?: string): Promise<Post[]> {
@@ -38,12 +64,37 @@ export async function getPost(slug: string, sessionId?: string): Promise<Post | 
     return null
   }
 
+  const type = attrs.type as PostType
+
+  if (type === "blog") {
+    return {
+      slug,
+      title: attrs.title as string,
+      publishedAt: new Date(attrs.published_at as string),
+      picture: attrs.picture as string,
+      content: body,
+      snippet: attrs.snippet as string,
+      type
+    };
+  }
+
+  if (type === "picture") {
+    return {
+      slug,
+      title: attrs.title as string,
+      publishedAt: new Date(attrs.published_at as string),
+      picture: attrs.picture as string,
+      content: body,
+      type
+    }
+  }
+
+  // type === "micro"
   return {
     slug,
     title: attrs.title as string,
     publishedAt: new Date(attrs.published_at as string),
-    picture: attrs.picture as string,
     content: body,
-    snippet: attrs.snippet as string,
+    type
   };
 }

@@ -3,7 +3,7 @@ import { extract } from "$std/front_matter/any.ts";
 import { join } from "$std/path/mod.ts";
 import { Head } from "$fresh/runtime.ts";
 import Header from "@/components/header.tsx";
-import { CSS, render } from "$gfm";
+import { CSS, render } from "@deno/gfm";
 import Footer from "@/components/footer.tsx";
 import { getSessionId } from "@/plugins/oauth.ts"
 
