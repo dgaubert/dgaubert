@@ -307,8 +307,21 @@ console.log("All permutations:", permutations);
 
 ### Conclusion
 
-Analyzing algorithm complexity helps in several ways:
+Analyzing algorithm complexity helps in:
 
-- **Comparing algorithms**: It allows us to compare different algorithms to solve the same problem and choose the most efficient one.
-- **Predicting performance**: It helps in predicting how an algorithm will perform as the input size increases, enabling better resource allocation and optimization.
-- **Scaling considerations**: Understanding complexity helps in designing algorithms that can handle large datasets efficiently, which is crucial in real-world applications.
+- **Comparing algorithms** to solve the same problem and choose the most efficient one.
+- **Predicting performance** as the input size increases, enabling better resource allocation and optimization.
+- **Scaling considerations** to handle large datasets efficiently, which is crucial in real-world applications.
+
+A handy table wrapping everything up:
+
+| Big O notation | Name | Sample |
+|----------------|------|--------|
+| O(1) | Constant | Dictionary or object access |
+| O(log 1) | Logarithmic | Binary search |
+| O(n) | Linear | Loop |
+| O(n log n) | Linerithmic | Loop * binary search |
+| O(n^2) | Quadratic | Two nested loops |
+| O(n^k) | Polinomial | k nested loops |
+| O(2^n) | Exponential | Recursion |
+| O(n!) | Factorial | Recursion within a loop |
