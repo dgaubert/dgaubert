@@ -16,4 +16,4 @@ Next Sunday (April 28, 2024), I'm going to run the [Madrid half marathon](https:
 | 10km | 50:11 |
 | 15km | 1:34:32 |
 
-As I trained for lower distances many more times than longer ones, my records are worse for 10 and 15 km. After the half-marathon, my next goal is to run 10 km in 45 minutes.
+As I trained for shorter distances many more times than longer ones, my records are worse for 10 and 15 km. After the half-marathon, my next goal is to run 10 km in 45 minutes.
