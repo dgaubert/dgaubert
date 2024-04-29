@@ -1,5 +1,4 @@
 import { Post, Blog, Picture, Micro } from "@/utils/posts.ts";
-import { strip } from "@deno/gfm";
 
 export default function PostCard(props: { post: Post }) {
   const { post } = props;
@@ -35,7 +34,7 @@ export default function PostCard(props: { post: Post }) {
           </time>
           <img class="my-8" src={picture.picture} />
           <div class="mt-4 text-gray-900">
-            {strip(picture.content)}
+            {picture.snippet}
           </div>
         </a>
       </div>
@@ -51,7 +50,7 @@ export default function PostCard(props: { post: Post }) {
           {publishedAt}
         </time>
         <div class="mt-4 text-gray-900">
-          {strip(micro.snippet)}
+          {micro.snippet}
         </div>
       </a>
     </div>

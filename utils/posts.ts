@@ -23,6 +23,7 @@ export interface Picture {
   slug: string;
   title: string;
   publishedAt: Date;
+  snippet: string;
   picture: string;
   content: string;
   type: PictureType;
@@ -86,6 +87,7 @@ export async function getPost(slug: string, sessionId?: string): Promise<Post | 
       publishedAt: new Date(attrs.published_at as string),
       picture: attrs.picture as string,
       content: body,
+      snippet: attrs.snippet as string,
       type
     }
   }
