@@ -16,6 +16,7 @@
 - [x] Type of posts: blog, picture, micro
 - [ ] Refactor
 - [ ] Lint & format
+- [ ] Replace FRIEND_EMAILS env variable by a file
 
 # Content
 
