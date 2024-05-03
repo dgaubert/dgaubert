@@ -12,8 +12,10 @@
 # Roadmap
 
 - [x] User signup/login/session (deno)
-- [ ] Get email from session data
-- [ ] Type of posts: blog, picture, micro
+- [x] Get email from session data
+- [x] Type of posts: blog, picture, micro
+- [ ] Refactor
+- [ ] Lint & format
 
 # Content
 
