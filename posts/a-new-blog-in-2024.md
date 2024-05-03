@@ -3,7 +3,8 @@ title: Why Start a New Blog in 2024
 published_at: 2024-04-24T10:00:00.000Z
 picture: /blog.jpeg
 snippet: In an era where social media platforms dominate online communication and content consumption, the idea of starting a new blog might seem antiquated to some. As a software engineer, I have the ability to create a place for myself, fully customizable, and share information with others granularly. 
-private: false
+private: true
+for_friends_only: true
 draft: false
 type: blog
 ---

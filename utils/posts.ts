@@ -41,12 +41,12 @@ export interface Micro {
 export type Post = Blog | Picture | Micro
 
 // Get posts
-export async function getPosts(sessionId?: string): Promise<Post[]> {
+export async function getPosts(sessionId?: string, isFriend?: boolean): Promise<Post[]> {
   const files = Deno.readDir(DIRECTORY);
   const promises = [];
   for await (const file of files) {
     const slug = file.name.replace(".md", "");
-    promises.push(getPost(slug, sessionId));
+    promises.push(getPost(slug, sessionId, isFriend));
   }
   const posts = (await Promise.all(promises) as Post[]).filter(p => p !== null);
   posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
@@ -54,7 +54,7 @@ export async function getPosts(sessionId?: string): Promise<Post[]> {
 }
 
 // Get post
-export async function getPost(slug: string, sessionId?: string): Promise<Post | null> {
+export async function getPost(slug: string, sessionId?: string, isFriend?: boolean): Promise<Post | null> {
   const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
   const { attrs, body } = extract(text);
 
@@ -63,6 +63,10 @@ export async function getPost(slug: string, sessionId?: string): Promise<Post | 
   }
 
   if (attrs.private && !sessionId) {
+    return null
+  }
+
+  if (attrs.for_friends_only && !isFriend) {
     return null
   }
 

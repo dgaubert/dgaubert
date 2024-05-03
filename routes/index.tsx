@@ -5,7 +5,7 @@ import { getPosts, Post } from "@/utils/posts.ts";
 import Header from "@/components/header.tsx"
 import PostCard from "@/components/post-card.tsx"
 import Footer from "@/components/footer.tsx"
-import { getSessionId } from "../plugins/oauth.ts"
+import { getSessionId, isFriend } from "../plugins/oauth.ts"
 
 interface PageData {
   posts: Post[]
@@ -15,7 +15,8 @@ interface PageData {
 export const handler: Handlers<PageData> = {
   async GET(req, ctx) {
     const sessionId = await getSessionId(req)
-    const posts = await getPosts(sessionId);
+    const isUserAFriend = await isFriend(sessionId)
+    const posts = await getPosts(sessionId, isUserAFriend);
     return ctx.render({ posts, sessionId });
   }
 };

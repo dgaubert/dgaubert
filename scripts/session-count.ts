@@ -1,3 +1,5 @@
+/// <reference lib="deno.unstable" />
+
 const siteSessions = [];
 
 // 79638f4a-856e-4f8f-8a71-e734b09ae10f
@@ -15,4 +17,4 @@ for await (const res of iter) {
   siteSessions.push(res);
 }
 
-console.log(`Number of active sessions: ${siteSessions.length}`)
+console.log(`Number of active sessions: ${siteSessions.length}`)  

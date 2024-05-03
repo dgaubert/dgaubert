@@ -10,7 +10,9 @@ import * as $feed from "./routes/feed.ts";
 import * as $index from "./routes/index.tsx";
 import * as $micro_slug_ from "./routes/micro/[slug].tsx";
 import * as $picture_slug_ from "./routes/picture/[slug].tsx";
+import * as $privacy_policy from "./routes/privacy-policy.tsx";
 import * as $signin from "./routes/signin.tsx";
+import * as $terms_and_conditions from "./routes/terms-and-conditions.tsx";
 
 import { type Manifest } from "$fresh/server.ts";
 
@@ -24,7 +26,9 @@ const manifest = {
     "./routes/index.tsx": $index,
     "./routes/micro/[slug].tsx": $micro_slug_,
     "./routes/picture/[slug].tsx": $picture_slug_,
+    "./routes/privacy-policy.tsx": $privacy_policy,
     "./routes/signin.tsx": $signin,
+    "./routes/terms-and-conditions.tsx": $terms_and_conditions,
   },
   islands: {},
   baseUrl: import.meta.url,

@@ -3,6 +3,7 @@ title: Picture
 published_at: 2024-04-26T11:00:00.000Z
 picture: /rss.jpeg
 private: true
+for_friends_only: false
 draft: true
 type: picture
 ---

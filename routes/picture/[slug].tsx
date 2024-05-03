@@ -4,7 +4,7 @@ import { getPost, Picture } from "@/utils/posts.ts";
 import { CSS, render } from "@deno/gfm";
 import Footer from "@/components/footer.tsx";
 import Header from "@/components/header.tsx";
-import { getSessionId } from "@/plugins/oauth.ts"
+import { getSessionId, isFriend } from "@/plugins/oauth.ts"
 
 interface PageData {
   post: Picture
@@ -16,7 +16,8 @@ export const handler: Handlers<PageData> = {
     try {
       const slug = ctx.params.slug
       const sessionId = await getSessionId(req)
-      const post = await getPost(slug, sessionId);
+      const isUserAFriend = await isFriend(sessionId)
+      const post = await getPost(slug, sessionId, isUserAFriend);
 
       if (!post) {
         return ctx.renderNotFound();

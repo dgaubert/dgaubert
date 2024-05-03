@@ -3,7 +3,8 @@ title: Algorithms complexity
 published_at: 2024-04-27T11:00:00.000Z
 picture: /algorithm-complexity.jpeg
 snippet: A summary of different algorithm complexities and examples, ordered from the most to the least efficient.
-private: false
+private: true
+for_friends_only: false
 draft: false
 type: blog
 ---

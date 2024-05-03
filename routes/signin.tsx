@@ -3,8 +3,8 @@ import Header from "@/components/header.tsx";
 import Footer from "@/components/footer.tsx";
 import { getSessionId } from "@/plugins/oauth.ts"
 import GoogleOAuthButton from "@/components/google-oauth-button.tsx"
-import TwitterOAuthButton from "@/components/twitter-oauth-button.tsx"
 import GithubOAuthButton from "@/components/github-oauth-button.tsx"
+import FacebookOAuthButton from "@/components/facebook-oauth-button.tsx";
 
 interface Page {
   sessionId?: string
@@ -29,7 +29,7 @@ export default function AboutPage(props: PageProps<Page>) {
               <GoogleOAuthButton />
             </li>
             <li class="pb-4">
-              <TwitterOAuthButton />
+              <FacebookOAuthButton />
             </li>
             <li class="pb-4">
               <GithubOAuthButton />

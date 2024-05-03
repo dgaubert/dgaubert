@@ -3,6 +3,7 @@ title: Rock 'n' roll Madrid Half Marathon
 published_at: 2024-04-26T19:00:00.000Z
 snippet: Next Sunday (April 28, 2024), I'm going to run the Madrid half marathon. Despite it being my first attempt at such a distance, I feel confident in finishing it because it's been three years since I've been training regularly.
 private: false
+for_friends_only: false
 draft: false
 type: micro
 ---
