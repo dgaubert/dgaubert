@@ -16,9 +16,11 @@
 - [x] Type of posts: blog, picture, micro
 - [ ] Refactor
 - [ ] Lint & format
-- [ ] Replace FRIEND_EMAILS env variable by a file
+- [x] Replace FRIEND_EMAILS env variable by a file
+- [ ] Pagination
 
 # Content
 
 - Post about deno, deno deploy and fresh
 - Why I workout every day
+- Cairo

@@ -1,5 +1,6 @@
 import { createGitHubOAuthConfig, createGoogleOAuthConfig, createFacebookOAuthConfig, createHelpers } from "jsr:@deno/kv-oauth";
 import type { Plugin } from "$fresh/server.ts";
+import friends from "@/utils/friends.ts";
 
 const { signIn: signInGithub, handleCallback: handleCallbackGithub } = createHelpers(
   createGitHubOAuthConfig()
@@ -110,8 +111,6 @@ interface UserInfo {
   email: string;
   isFriend: boolean;
 }
-
-const friends = Deno.env.get("FRIEND_EMAILS")?.split(",")
 
 async function syncFriends(friends?: string[]) {  
   const iter = kv.list<UserInfo>({ prefix: ["users"] });
