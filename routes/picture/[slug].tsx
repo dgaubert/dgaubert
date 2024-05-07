@@ -4,19 +4,19 @@ import { getPost, Picture } from "@/utils/posts.ts";
 import { CSS, render } from "@deno/gfm";
 import Footer from "@/components/footer.tsx";
 import Header from "@/components/header.tsx";
-import { getSessionId, isFriend } from "@/plugins/oauth.ts"
+import { getSessionId, isFriend } from "@/plugins/oauth.ts";
 
 interface PageData {
-  post: Picture
-  sessionId?: string
+  post: Picture;
+  sessionId?: string;
 }
 
 export const handler: Handlers<PageData> = {
   async GET(req, ctx) {
     try {
-      const slug = ctx.params.slug
-      const sessionId = await getSessionId(req)
-      const isUserAFriend = await isFriend(sessionId)
+      const slug = ctx.params.slug;
+      const sessionId = await getSessionId(req);
+      const isUserAFriend = await isFriend(sessionId);
       const post = await getPost(slug, sessionId, isUserAFriend);
 
       if (!post) {
@@ -27,16 +27,22 @@ export const handler: Handlers<PageData> = {
     } catch {
       return ctx.renderNotFound();
     }
-  }
+  },
 };
 
 export default function PostPage(props: PageProps<PageData>) {
   const post = props.data.post as Picture;
-  const sessionId = props.data.sessionId
-  const publishedAt = new Date(post.publishedAt).toLocaleDateString("en-us", { year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" });
+  const sessionId = props.data.sessionId;
+  const publishedAt = new Date(post.publishedAt).toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
   return (
     <>
-      <Header backHome social sessionId={sessionId}/>
+      <Header backHome social sessionId={sessionId} />
       <Head>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>

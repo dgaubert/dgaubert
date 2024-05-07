@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { getPosts, Post, Blog, Picture, Micro } from "@/utils/posts.ts";
+import { Blog, getPosts, Micro, Picture, Post } from "@/utils/posts.ts";
 import { Feed, type Item as FeedItem } from "feed";
 import { strip } from "@deno/gfm";
 
@@ -20,14 +20,14 @@ export const handler: Handlers<Post[]> = {
       generator: "Feed (https://github.com/jpmonette/feed) for Deno",
       feedLinks: {
         atom: `${origin}/feed`,
-      }
+      },
     });
 
     posts.forEach((post: Post) => {
-      let item: FeedItem
+      let item: FeedItem;
 
       if (post.type === "blog") {
-        const blog = post as Blog
+        const blog = post as Blog;
         item = {
           id: `${origin}/${blog.title}`,
           title: blog.title,
@@ -36,13 +36,13 @@ export const handler: Handlers<Post[]> = {
           link: `${origin}/blog/${blog.slug}`,
           copyright,
           published: blog.publishedAt,
-        }
+        };
         feed.addItem(item);
-        return
+        return;
       }
 
       if (post.type === "picture") {
-        const picture = post as Picture
+        const picture = post as Picture;
 
         item = {
           id: `${origin}/${picture.title}`,
@@ -52,13 +52,13 @@ export const handler: Handlers<Post[]> = {
           link: `${origin}/picture/${picture.slug}`,
           copyright,
           published: picture.publishedAt,
-        }
+        };
 
         feed.addItem(item);
-        return
+        return;
       }
 
-      const micro = post as Micro
+      const micro = post as Micro;
 
       item = {
         id: `${origin}/${micro.title}`,
@@ -77,7 +77,7 @@ export const handler: Handlers<Post[]> = {
     return new Response(atomFeed, {
       headers: {
         "content-type": "application/atom+xml; charset=utf-8",
-      }
+      },
     });
-  }
+  },
 };

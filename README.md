@@ -1,6 +1,9 @@
 # I'm Daniel García Aubert
 
-Experienced Software Engineer with 18 years of expertise in web development. Seeking a challenging opportunity in the software industry to leverage experience and technical prowess to innovative projects and help teams to success.
+Experienced Software Engineer with 18 years of expertise in web development.
+Seeking a challenging opportunity in the software industry to leverage
+experience and technical prowess to innovative projects and help teams to
+success.
 
 ### I use to work with:
 
@@ -21,6 +24,8 @@ Experienced Software Engineer with 18 years of expertise in web development. See
 
 #### Or reach me out on:
 
-<a href="https://twitter.com/danigaubert"><img alt="Twitter" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a> &nbsp;
-<a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a> &nbsp;
+<a href="https://twitter.com/danigaubert"><img alt="Twitter" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"/></a>
+&nbsp;
+<a href="https://www.linkedin.com/in/danielgarciaaubert/"><img alt="LinkedIn" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/></a>
+&nbsp;
 <a href="mailto:danielgarciaaubert@gmail.com"><img alt="Gmail" width="38px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.12.2/icons/gmail.svg"/></a>

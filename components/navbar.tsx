@@ -6,8 +6,8 @@ import SignoutButton from "@/components/signout-button.tsx";
 interface Props {
   backHome?: boolean;
   about?: boolean;
-  sessionId?: string
-};
+  sessionId?: string;
+}
 
 export default function Navbar(props: Props) {
   return (
@@ -23,10 +23,10 @@ export default function Navbar(props: Props) {
             {props.about && <AboutButton />}
           </li>
           <li>
-            { props.sessionId ? <SignoutButton /> : <SigninButton /> }
+            {props.sessionId ? <SignoutButton /> : <SigninButton />}
           </li>
         </ul>
       </nav>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import MailButton from "@/components/mail-button.tsx"
+import MailButton from "@/components/mail-button.tsx";
 import GithubButton from "@/components/github-button.tsx";
 import TwitterButton from "@/components/twitter-button.tsx";
 import LinkedinButton from "@/components/linkedin-button.tsx";
@@ -13,5 +13,5 @@ export default function Social() {
         <LinkedinButton />
       </nav>
     </div>
-  )
+  );
 }

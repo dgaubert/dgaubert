@@ -5,9 +5,9 @@ const DIRECTORY = "./posts";
 
 type BlogType = "blog";
 type PictureType = "picture";
-type MicroType = "micro"
+type MicroType = "micro";
 
-type PostType = BlogType | PictureType | MicroType
+type PostType = BlogType | PictureType | MicroType;
 
 export interface Blog {
   slug: string;
@@ -38,39 +38,48 @@ export interface Micro {
   type: MicroType;
 }
 
-export type Post = Blog | Picture | Micro
+export type Post = Blog | Picture | Micro;
 
 // Get posts
-export async function getPosts(sessionId?: string, isFriend?: boolean): Promise<Post[]> {
+export async function getPosts(
+  sessionId?: string,
+  isFriend?: boolean,
+): Promise<Post[]> {
   const files = Deno.readDir(DIRECTORY);
   const promises = [];
   for await (const file of files) {
     const slug = file.name.replace(".md", "");
     promises.push(getPost(slug, sessionId, isFriend));
   }
-  const posts = (await Promise.all(promises) as Post[]).filter(p => p !== null);
+  const posts = (await Promise.all(promises) as Post[]).filter((p) =>
+    p !== null
+  );
   posts.sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
   return posts;
 }
 
 // Get post
-export async function getPost(slug: string, sessionId?: string, isFriend?: boolean): Promise<Post | null> {
+export async function getPost(
+  slug: string,
+  sessionId?: string,
+  isFriend?: boolean,
+): Promise<Post | null> {
   const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
   const { attrs, body } = extract(text);
 
   if (attrs.draft) {
-    return null
+    return null;
   }
 
   if (attrs.private && !sessionId) {
-    return null
+    return null;
   }
 
   if (attrs.for_friends_only && !isFriend) {
-    return null
+    return null;
   }
 
-  const type = attrs.type as PostType
+  const type = attrs.type as PostType;
 
   if (type === "blog") {
     return {
@@ -80,7 +89,7 @@ export async function getPost(slug: string, sessionId?: string, isFriend?: boole
       picture: attrs.picture as string,
       content: body,
       snippet: attrs.snippet as string,
-      type
+      type,
     };
   }
 
@@ -92,8 +101,8 @@ export async function getPost(slug: string, sessionId?: string, isFriend?: boole
       picture: attrs.picture as string,
       content: body,
       snippet: attrs.snippet as string,
-      type
-    }
+      type,
+    };
   }
 
   // type === "micro"
@@ -103,6 +112,6 @@ export async function getPost(slug: string, sessionId?: string, isFriend?: boole
     publishedAt: new Date(attrs.published_at as string),
     content: body,
     snippet: attrs.snippet as string,
-    type
+    type,
   };
 }

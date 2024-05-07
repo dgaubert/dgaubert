@@ -1,11 +1,17 @@
-import { Post, Blog, Picture, Micro } from "@/utils/posts.ts";
+import { Blog, Micro, Picture, Post } from "@/utils/posts.ts";
 
 export default function PostCard(props: { post: Post }) {
   const { post } = props;
-  const publishedAt = new Date(post.publishedAt).toLocaleDateString("en-us", { year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "numeric" })
+  const publishedAt = new Date(post.publishedAt).toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
 
   if (post.type === "blog") {
-    const blog = post as Blog
+    const blog = post as Blog;
     return (
       <div class="py-8 border-t-2">
         <a href={`/blog/${blog.slug}`}>
@@ -25,7 +31,7 @@ export default function PostCard(props: { post: Post }) {
   }
 
   if (post.type === "picture") {
-    const picture = post as Picture
+    const picture = post as Picture;
     return (
       <div class="py-8 border-t-2">
         <a href={`/picture/${picture.slug}`}>
@@ -42,7 +48,7 @@ export default function PostCard(props: { post: Post }) {
   }
 
   // post.type === "micro"
-  const micro = post as Micro
+  const micro = post as Micro;
   return (
     <div class="py-8 border-t-2">
       <a href={`/micro/${micro.slug}`}>

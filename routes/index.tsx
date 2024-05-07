@@ -2,28 +2,28 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { Head } from "$fresh/runtime.ts";
 import { CSS } from "@deno/gfm";
 import { getPosts, Post } from "@/utils/posts.ts";
-import Header from "@/components/header.tsx"
-import PostCard from "@/components/post-card.tsx"
-import Footer from "@/components/footer.tsx"
-import { getSessionId, isFriend } from "../plugins/oauth.ts"
+import Header from "@/components/header.tsx";
+import PostCard from "@/components/post-card.tsx";
+import Footer from "@/components/footer.tsx";
+import { getSessionId, isFriend } from "../plugins/oauth.ts";
 
 interface PageData {
-  posts: Post[]
-  sessionId?: string
+  posts: Post[];
+  sessionId?: string;
 }
 
 export const handler: Handlers<PageData> = {
   async GET(req, ctx) {
-    const sessionId = await getSessionId(req)
-    const isUserAFriend = await isFriend(sessionId)
+    const sessionId = await getSessionId(req);
+    const isUserAFriend = await isFriend(sessionId);
     const posts = await getPosts(sessionId, isUserAFriend);
     return ctx.render({ posts, sessionId });
-  }
+  },
 };
 
 export default function BlogIndexPage(props: PageProps<PageData>) {
   const posts = props.data.posts;
-  const sessionId = props.data.sessionId
+  const sessionId = props.data.sessionId;
 
   return (
     <>

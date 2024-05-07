@@ -9,32 +9,37 @@ draft: false
 type: blog
 ---
 
-A summary of different algorithm complexities and examples, ordered from the most to the least efficient.
+A summary of different algorithm complexities and examples, ordered from the
+most to the least efficient.
 
 ### 1. O(1) - Constant
 
-The algorithm's runtime or space usage remains constant regardless of the size of the input. For example by accessing an element in an object by its key:
+The algorithm's runtime or space usage remains constant regardless of the size
+of the input. For example by accessing an element in an object by its key:
 
 ```js
 const animalsAndSounds = {
-  dog: 'bark',
-  cat: 'meow',
-  pig: 'oink'
+  dog: "bark",
+  cat: "meow",
+  pig: "oink",
 };
 
 function animalsAndSounds(animals, animal) {
   return animals[animal];
 }
 
-const result = animalSounds(animals, 'cat');
+const result = animalSounds(animals, "cat");
 console.log(result); // Output will be 'meow'
 ```
 
-Regardless of the number of key-value pairs in the object (animals), accessing an element by key using bracket notation `obj[key]` takes the same amount of time.
+Regardless of the number of key-value pairs in the object (animals), accessing
+an element by key using bracket notation `obj[key]` takes the same amount of
+time.
 
 ### 2. O(log n) - Logarithmic
 
-The algorithm's runtime or space usage grows logarithmically with the size of the input. Commonly seen in binary search algorithms.
+The algorithm's runtime or space usage grows logarithmically with the size of
+the input. Commonly seen in binary search algorithms.
 
 ```js
 // Binary search function to find an element in a sorted array
@@ -54,8 +59,7 @@ function binarySearch(arr, target) {
     // If the target is less than the middle element, search the left half
     if (arr[mid] > target) {
       right = mid - 1;
-    } 
-    // If the target is greater than the middle element, search the right half
+    } // If the target is greater than the middle element, search the right half
     else {
       left = mid + 1;
     }
@@ -72,18 +76,21 @@ const index = binarySearch(sortedArray, targetElement);
 console.log("Index of", targetElement, ":", index); // Output will be: Index of 13 : 6
 ```
 
-The binary search algorithm works by repeatedly dividing the search interval in half until the target element is found, the time complexity of binary search is **O(log n)**, where `n` is the number of elements in the array.
+The binary search algorithm works by repeatedly dividing the search interval in
+half until the target element is found, the time complexity of binary search is
+**O(log n)**, where `n` is the number of elements in the array.
 
 ### 3. O(n) - Linear
 
-The algorithm's runtime or space usage grows linearly with the size of the input. Each additional input element adds a constant amount of time or space.
+The algorithm's runtime or space usage grows linearly with the size of the
+input. Each additional input element adds a constant amount of time or space.
 
 ```js
 // Function to find the maximum element in an array
 function findMax(arr) {
   // Initialize max variable to store the maximum value
   let max = arr[0]; // Assume the first element is the maximum
-  
+
   // Iterate through the array to find the maximum element
   for (let i = 1; i < arr.length; i++) {
     // Update max if the current element is greater
@@ -91,7 +98,7 @@ function findMax(arr) {
       max = arr[i];
     }
   }
-  
+
   // Return the maximum element found
   return max;
 }
@@ -102,9 +109,10 @@ const maxElement = findMax(array);
 console.log("Maximum element:", maxElement); // Output will be: Maximum element: 9
 ```
 
-### 4. O(n log n) - Linearithmic 
+### 4. O(n log n) - Linearithmic
 
-The algorithm's runtime or space usage grows in proportion to `n` times the logarithm of `n`. Commonly seen in efficient sorting algorithms like quicksort.
+The algorithm's runtime or space usage grows in proportion to `n` times the
+logarithm of `n`. Commonly seen in efficient sorting algorithms like quicksort.
 
 ```js
 // Merge function to merge two sorted arrays
@@ -154,19 +162,23 @@ const sortedArray = mergeSort(unsortedArray);
 console.log("Sorted array:", sortedArray);
 ```
 
-- The `mergeSort` function recursively divides the array into halves until each half has 0 or 1 element (**O(log n)**, where `n` is the total number of elements of the input array). 
-- Then, it merges the sorted halves using the `merge` function, which has a time complexity of **O(n)**. 
+- The `mergeSort` function recursively divides the array into halves until each
+  half has 0 or 1 element (**O(log n)**, where `n` is the total number of
+  elements of the input array).
+- Then, it merges the sorted halves using the `merge` function, which has a time
+  complexity of **O(n)**.
 - The time complexity of `mergeSort` is **O(n log n)**
 
 ### 5. O(n^2) Quadratic
 
-The algorithm's runtime or space usage grows quadratically with the size of the input. Commonly seen in algorithms with nested loops over the input.
+The algorithm's runtime or space usage grows quadratically with the size of the
+input. Commonly seen in algorithms with nested loops over the input.
 
 ```js
 // Bubble sort function
 function bubbleSort(arr) {
   const n = arr.length;
-  
+
   // Iterate through the array elements
   for (let i = 0; i < n; i++) {
     // Last i elements are already in place, so we only need to check the first n-i elements
@@ -180,7 +192,7 @@ function bubbleSort(arr) {
       }
     }
   }
-  
+
   return arr;
 }
 
@@ -190,14 +202,19 @@ const sortedArray = bubbleSort(unsortedArray);
 console.log("Sorted array:", sortedArray);
 ```
 
-- The `bubbleSort` function iterates through the array multiple times, comparing adjacent elements and swapping them if they are in the wrong order. 
-- The outer loop runs `n` times, where `n` is the number of elements in the array.
-- The inner loop runs `n - i - 1` times in each iteration of the outer loop, where `i` is the current iteration of the outer loop.
-- Since both loops iterate over the entire array, the total number of comparisons and swaps is proportional to `n * n = n^2`.
+- The `bubbleSort` function iterates through the array multiple times, comparing
+  adjacent elements and swapping them if they are in the wrong order.
+- The outer loop runs `n` times, where `n` is the number of elements in the
+  array.
+- The inner loop runs `n - i - 1` times in each iteration of the outer loop,
+  where `i` is the current iteration of the outer loop.
+- Since both loops iterate over the entire array, the total number of
+  comparisons and swaps is proportional to `n * n = n^2`.
 
 ### 6. O(n^k) - Polynomial
 
-The algorithm's runtime or space usage grows as a polynomial function of the input size, where `k` is a constant exponent.
+The algorithm's runtime or space usage grows as a polynomial function of the
+input size, where `k` is a constant exponent.
 
 ```js
 // Function to find the sum of all triplets of elements in an array
@@ -223,14 +240,20 @@ const sum = findSumOfTriplets(array);
 console.log("Sum of all triplets:", sum);
 ```
 
-- The `findSumOfTriplets` function iterates through all triplets of elements in the array using nested loops.
-- This results in iterating over all possible combinations of triplets of elements in the array.
-- Since all three loops iterate over the entire array, the total number of triplets is proportional to `n * (n - 1) * (n - 2) / 6`.
-- The time complexity of this algorithm is **O(n^3)** polynomial time complexity, where `k = 3`.
+- The `findSumOfTriplets` function iterates through all triplets of elements in
+  the array using nested loops.
+- This results in iterating over all possible combinations of triplets of
+  elements in the array.
+- Since all three loops iterate over the entire array, the total number of
+  triplets is proportional to `n * (n - 1) * (n - 2) / 6`.
+- The time complexity of this algorithm is **O(n^3)** polynomial time
+  complexity, where `k = 3`.
 
-### 7. O(2^n) - Exponential 
+### 7. O(2^n) - Exponential
 
-The algorithm's runtime or space usage grows exponentially with the size of the input. Commonly seen in brute-force algorithms that explore all possible solutions.
+The algorithm's runtime or space usage grows exponentially with the size of the
+input. Commonly seen in brute-force algorithms that explore all possible
+solutions.
 
 ```js
 // Function to generate all subsets of a set using recursion
@@ -239,17 +262,19 @@ function generateSubsets(set) {
   if (set.length === 0) {
     return [[]];
   }
-  
+
   // Remove the first element from the set
   const firstElement = set[0];
   const remainingSet = set.slice(1);
-  
+
   // Recursively generate subsets without the first element
   const subsetsWithoutFirst = generateSubsets(remainingSet);
-  
+
   // Generate subsets including the first element by adding it to each subset
-  const subsetsWithFirst = subsetsWithoutFirst.map(subset => [firstElement, ...subset]);
-  
+  const subsetsWithFirst = subsetsWithoutFirst.map(
+    (subset) => [firstElement, ...subset],
+  );
+
   // Concatenate subsets without and with the first element
   return subsetsWithoutFirst.concat(subsetsWithFirst);
 }
@@ -260,39 +285,45 @@ const subsets = generateSubsets(set);
 console.log("All subsets:", subsets);
 ```
 
-- The `generateSubsets` function recursively generates all subsets of a given set.
-- For each element in the set, the function divides the problem into two subproblems: one that includes the current element and one that does not.
-- The number of subsets doubles with each additional element in the set, resulting in an exponential growth in the number of subsets.
-- The time complexity of this algorithm is **O(2^n)**, where `n` is the number of elements in the set.
+- The `generateSubsets` function recursively generates all subsets of a given
+  set.
+- For each element in the set, the function divides the problem into two
+  subproblems: one that includes the current element and one that does not.
+- The number of subsets doubles with each additional element in the set,
+  resulting in an exponential growth in the number of subsets.
+- The time complexity of this algorithm is **O(2^n)**, where `n` is the number
+  of elements in the set.
 
 ### 8. O(n!) - Factorial
 
-The algorithm's runtime or space usage grows factorialy with the size of the input. Commonly seen in algorithms that generate all permutations or combinations of a set.
+The algorithm's runtime or space usage grows factorialy with the size of the
+input. Commonly seen in algorithms that generate all permutations or
+combinations of a set.
 
 ```js
 // Function to generate all permutations of a set using recursion
 function generatePermutations(set) {
   const permutations = [];
-  
+
   // Base case: If the set is empty, return an array containing an empty permutation
   if (set.length === 0) {
     return [[]];
   }
-  
+
   // Iterate through each element in the set
   for (let i = 0; i < set.length; i++) {
     // Create a copy of the set without the current element
     const remainingSet = set.slice(0, i).concat(set.slice(i + 1));
-    
+
     // Recursively generate permutations of the remaining set
     const subPermutations = generatePermutations(remainingSet);
-    
+
     // Append the current element to each permutation of the remaining set
     for (const subPermutation of subPermutations) {
       permutations.push([set[i], ...subPermutation]);
     }
   }
-  
+
   return permutations;
 }
 
@@ -302,27 +333,33 @@ const permutations = generatePermutations(set);
 console.log("All permutations:", permutations);
 ```
 
-- The `generatePermutations` function recursively generates all permutations of a given set, where `n` is the number of elements in the set.
-- For each element in the set, the function recursively generates permutations of the remaining elements and appends the current element to each permutation.
-- The number of permutations grows factorially with the size of the set, resulting in a factorial growth in the number of permutations **O(n!)**.
+- The `generatePermutations` function recursively generates all permutations of
+  a given set, where `n` is the number of elements in the set.
+- For each element in the set, the function recursively generates permutations
+  of the remaining elements and appends the current element to each permutation.
+- The number of permutations grows factorially with the size of the set,
+  resulting in a factorial growth in the number of permutations **O(n!)**.
 
 ### Conclusion
 
 Analyzing algorithm complexity helps in:
 
-- **Comparing algorithms** to solve the same problem and choose the most efficient one.
-- **Predicting performance** as the input size increases, enabling better resource allocation and optimization.
-- **Scaling considerations** to handle large datasets efficiently, which is crucial in real-world applications.
+- **Comparing algorithms** to solve the same problem and choose the most
+  efficient one.
+- **Predicting performance** as the input size increases, enabling better
+  resource allocation and optimization.
+- **Scaling considerations** to handle large datasets efficiently, which is
+  crucial in real-world applications.
 
 A handy table wrapping everything up:
 
-| Big O notation | Name | Sample |
-|----------------|------|--------|
-| O(1) | Constant | Dictionary or object access |
-| O(log 1) | Logarithmic | Binary search |
-| O(n) | Linear | Loop |
-| O(n log n) | Linerithmic | Loop * binary search |
-| O(n^2) | Quadratic | Two nested loops |
-| O(n^k) | Polinomial | k nested loops |
-| O(2^n) | Exponential | Recursion |
-| O(n!) | Factorial | Recursion within a loop |
+| Big O notation | Name        | Sample                      |
+| -------------- | ----------- | --------------------------- |
+| O(1)           | Constant    | Dictionary or object access |
+| O(log 1)       | Logarithmic | Binary search               |
+| O(n)           | Linear      | Loop                        |
+| O(n log n)     | Linerithmic | Loop * binary search        |
+| O(n^2)         | Quadratic   | Two nested loops            |
+| O(n^k)         | Polinomial  | k nested loops              |
+| O(2^n)         | Exponential | Recursion                   |
+| O(n!)          | Factorial   | Recursion within a loop     |

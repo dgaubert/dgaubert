@@ -1,24 +1,24 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import Header from "@/components/header.tsx";
 import Footer from "@/components/footer.tsx";
-import { getSessionId } from "@/plugins/oauth.ts"
-import GoogleOAuthButton from "@/components/google-oauth-button.tsx"
-import GithubOAuthButton from "@/components/github-oauth-button.tsx"
+import { getSessionId } from "@/plugins/oauth.ts";
+import GoogleOAuthButton from "@/components/google-oauth-button.tsx";
+import GithubOAuthButton from "@/components/github-oauth-button.tsx";
 import FacebookOAuthButton from "@/components/facebook-oauth-button.tsx";
 
 interface Page {
-  sessionId?: string
-};
+  sessionId?: string;
+}
 
 export const handler: Handlers<Page> = {
   async GET(req, ctx) {
-    const sessionId = await getSessionId(req)
+    const sessionId = await getSessionId(req);
     return ctx.render({ sessionId });
-  }
-}
+  },
+};
 
 export default function AboutPage(props: PageProps<Page>) {
-  const sessionId = props.data.sessionId
+  const sessionId = props.data.sessionId;
   return (
     <>
       <Header backHome sessionId={sessionId} />
