@@ -6,8 +6,9 @@ const DIRECTORY = "./posts";
 type BlogType = "blog";
 type PictureType = "picture";
 type MicroType = "micro";
+type MediaType = "media"
 
-type PostType = BlogType | PictureType | MicroType;
+type PostType = BlogType | PictureType | MicroType | MediaType;
 
 export interface Blog {
   slug: string;
@@ -38,7 +39,18 @@ export interface Micro {
   type: MicroType;
 }
 
-export type Post = Blog | Picture | Micro;
+export interface Media {
+  slug: string;
+  title: string;
+  publishedAt: Date;
+  link: string;
+  thumbnail: string;
+  snippet: string;
+  content: string;
+  type: MediaType;
+}
+
+export type Post = Blog | Picture | Micro | Media;
 
 // Get posts
 export async function getPosts(
@@ -105,11 +117,24 @@ export async function getPost(
     };
   }
 
-  // type === "micro"
+  if (type === "micro") {
+    return {
+      slug,
+      title: attrs.title as string,
+      publishedAt: new Date(attrs.published_at as string),
+      content: body,
+      snippet: attrs.snippet as string,
+      type,
+    };
+  }
+
+  // type === "media"
   return {
     slug,
     title: attrs.title as string,
     publishedAt: new Date(attrs.published_at as string),
+    link: attrs.link as string,
+    thumbnail: attrs.thumbnail as string,
     content: body,
     snippet: attrs.snippet as string,
     type,

@@ -9,6 +9,7 @@ import * as $about from "./routes/about.tsx";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $feed from "./routes/feed.ts";
 import * as $index from "./routes/index.tsx";
+import * as $media_slug_ from "./routes/media/[slug].tsx";
 import * as $micro_slug_ from "./routes/micro/[slug].tsx";
 import * as $picture_slug_ from "./routes/picture/[slug].tsx";
 import * as $privacy_policy from "./routes/privacy-policy.tsx";
@@ -27,6 +28,7 @@ const manifest = {
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/feed.ts": $feed,
     "./routes/index.tsx": $index,
+    "./routes/media/[slug].tsx": $media_slug_,
     "./routes/micro/[slug].tsx": $micro_slug_,
     "./routes/picture/[slug].tsx": $picture_slug_,
     "./routes/privacy-policy.tsx": $privacy_policy,

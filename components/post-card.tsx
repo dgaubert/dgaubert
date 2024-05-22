@@ -1,4 +1,4 @@
-import { Blog, Micro, Picture, Post } from "@/utils/posts.ts";
+import { Blog, Micro, Picture, Media, Post } from "@/utils/posts.ts";
 
 export default function PostCard(props: { post: Post }) {
   const { post } = props;
@@ -48,17 +48,38 @@ export default function PostCard(props: { post: Post }) {
   }
 
   // post.type === "micro"
-  const micro = post as Micro;
+  if (post.type === "micro") {
+    const micro = post as Micro;
+    return (
+      <div class="py-8 border-t-2">
+        <a href={`/micro/${micro.slug}`}>
+          <time class="text-gray-500">
+            {publishedAt}
+          </time>
+          <div class="mt-4 text-gray-900">
+            {micro.snippet}
+          </div>
+        </a>
+      </div>
+    );
+  }
+  
+  // post.type === "media"
+  const link = post as Media;
   return (
     <div class="py-8 border-t-2">
-      <a href={`/micro/${micro.slug}`}>
-        <time class="text-gray-500">
-          {publishedAt}
-        </time>
-        <div class="mt-4 text-gray-900">
-          {micro.snippet}
-        </div>
-      </a>
-    </div>
-  );
+    <a href={`/media/${link.slug}`}>
+      <time class="text-gray-500 mb-8">
+        {publishedAt}
+      </time>
+      <h3 class="text-2xl font-bold my-8">
+        {link.title}
+      </h3>
+      <img class="my-8" src={link.thumbnail} />
+      <div class="mt-4 text-gray-900">
+        {link.snippet}
+      </div>
+    </a>
+  </div>
+);
 }

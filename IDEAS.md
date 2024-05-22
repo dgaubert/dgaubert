@@ -17,8 +17,10 @@
 - [x] Lint & format
 - [x] Replace FRIEND_EMAILS env variable by a file
 - [x] Proper error when no permissions
+- [x] Add media type post
 - [ ] Refactor
 - [ ] Pagination
+- [ ] Tags
 
 # Content
 
