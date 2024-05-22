@@ -45,9 +45,9 @@ export default function PostPage(props: PageProps<PageData, RequestState>) {
         <time class="text-gray-500 text-xl pr-2">
           {publishedAt}
         </time>
-        <img class="w-full mt-8 mb-16" src={post.picture} />
+        <img class="w-full mt-8 mb-4" src={post.picture} />
         <div
-          class="mt-8 markdown-body"
+          class="markdown-body"
           dangerouslySetInnerHTML={{ __html: render(post.content) }}
         />
       </main>
