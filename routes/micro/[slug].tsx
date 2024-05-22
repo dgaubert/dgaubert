@@ -4,35 +4,30 @@ import { getPost, Micro } from "@/utils/posts.ts";
 import { CSS, render } from "@deno/gfm";
 import Footer from "@/components/footer.tsx";
 import Header from "@/components/header.tsx";
-import { getSessionId, isFriend } from "@/plugins/oauth.ts";
+import { PageData, RequestState } from "@/routes/types.ts"
 
-interface PageData {
-  post: Micro;
-  sessionId?: string;
-}
-
-export const handler: Handlers<PageData> = {
-  async GET(req, ctx) {
+export const handler: Handlers<PageData, RequestState> = {
+  async GET(_req, ctx) {
     try {
       const slug = ctx.params.slug;
-      const sessionId = await getSessionId(req);
-      const isUserAFriend = await isFriend(sessionId);
-      const post = await getPost(slug, sessionId, isUserAFriend);
+      const sessionId = ctx.state.sessionId;
+      const isFriend = ctx.state.isFriend;
+      const post = await getPost(slug, sessionId, isFriend);
 
       if (!post) {
         return ctx.renderNotFound();
       }
 
-      return ctx.render({ post: post as Micro, sessionId });
+      return ctx.render({ post: post as Micro });
     } catch {
       return ctx.renderNotFound();
     }
   },
 };
 
-export default function PostPage(props: PageProps<PageData>) {
+export default function PostPage(props: PageProps<PageData, RequestState>) {
   const post = props.data.post as Micro;
-  const sessionId = props.data.sessionId;
+  const sessionId = props.state.sessionId;
   const publishedAt = new Date(post.publishedAt).toLocaleDateString("en-us", {
     year: "numeric",
     month: "long",

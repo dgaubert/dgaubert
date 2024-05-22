@@ -17,12 +17,11 @@ export default function Footer() {
             </div>
           </li>
         </ul>
-        <ul class="flex items-center">
-          <li>
-            <div class="text-xs text-gray-500">
-              Copyright © 2024<br />
-              All right reserved.
-            </div>
+        <ul class="flex items-center text-right">
+          <li class="text-xs text-gray-500">
+            <div><a href="/terms-and-conditions" class="hover:underline">Terms and conditions</a></div>
+            <div><a href="/privacy-policy" class="hover:underline">Privacy policy</a></div>
+            <div class="pt-2"> Copyright © 2024. All right reserved.</div>
           </li>
         </ul>
       </nav>

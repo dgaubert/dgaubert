@@ -14,9 +14,10 @@
 - [x] User signup/login/session (deno)
 - [x] Get email from session data
 - [x] Type of posts: blog, picture, micro
-- [ ] Refactor
-- [ ] Lint & format
+- [x] Lint & format
 - [x] Replace FRIEND_EMAILS env variable by a file
+- [x] Proper error when no permissions
+- [ ] Refactor
 - [ ] Pagination
 
 # Content

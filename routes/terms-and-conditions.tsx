@@ -5,29 +5,23 @@ import { Head } from "$fresh/runtime.ts";
 import Header from "@/components/header.tsx";
 import { CSS, render } from "@deno/gfm";
 import Footer from "@/components/footer.tsx";
-import { getSessionId } from "@/plugins/oauth.ts";
+import { PageData, RequestState } from "@/routes/types.ts"
 
 const DIRECTORY = "./pages";
 
-interface Page {
-  content: string;
-  sessionId?: string;
-}
-
-export const handler: Handlers<Page> = {
-  async GET(req, ctx) {
-    const sessionId = await getSessionId(req);
+export const handler: Handlers<PageData> = {
+  async GET(_req, ctx) {
     const content = await Deno.readTextFile(
       join(DIRECTORY, "terms-and-conditions.md"),
     );
     const { body } = extract(content);
-    return ctx.render({ content: body, sessionId });
+    return ctx.render({ content: body });
   },
 };
 
-export default function AboutPage(props: PageProps<Page>) {
-  const sessionId = props.data.sessionId;
-  const content = props.data.content;
+export default function AboutPage(props: PageProps<PageData, RequestState>) {
+  const content = props.data.content as string;
+  const sessionId = props.state.sessionId;
   return (
     <>
       <Header backHome sessionId={sessionId} />

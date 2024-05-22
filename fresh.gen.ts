@@ -4,6 +4,7 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $_middleware from "./routes/_middleware.ts";
 import * as $about from "./routes/about.tsx";
 import * as $blog_slug_ from "./routes/blog/[slug].tsx";
 import * as $feed from "./routes/feed.ts";
@@ -13,6 +14,7 @@ import * as $picture_slug_ from "./routes/picture/[slug].tsx";
 import * as $privacy_policy from "./routes/privacy-policy.tsx";
 import * as $signin from "./routes/signin.tsx";
 import * as $terms_and_conditions from "./routes/terms-and-conditions.tsx";
+import * as $types from "./routes/types.ts";
 
 import { type Manifest } from "$fresh/server.ts";
 
@@ -20,6 +22,7 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/_middleware.ts": $_middleware,
     "./routes/about.tsx": $about,
     "./routes/blog/[slug].tsx": $blog_slug_,
     "./routes/feed.ts": $feed,
@@ -29,6 +32,7 @@ const manifest = {
     "./routes/privacy-policy.tsx": $privacy_policy,
     "./routes/signin.tsx": $signin,
     "./routes/terms-and-conditions.tsx": $terms_and_conditions,
+    "./routes/types.ts": $types,
   },
   islands: {},
   baseUrl: import.meta.url,
