@@ -38,7 +38,7 @@ export default function PostCard(props: { post: Post }) {
           <time class="text-gray-500">
             {publishedAt}
           </time>
-          <img class="my-8" src={picture.picture} />
+          <img class="w-full my-8" src={picture.picture} />
           <div class="mt-4 text-gray-900">
             {picture.snippet}
           </div>
