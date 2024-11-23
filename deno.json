@@ -24,7 +24,7 @@
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "$std/": "https://deno.land/std@0.216.0/",
-    "$tabler-icons/": "https://deno.land/x/tabler_icons_tsx@0.0.6/",
+    "$tabler-icons/": "https://deno.land/x/tabler_icons_tsx@0.0.7/",
     "./": "./",
     "@/": "./",
     "@deno/gfm": "jsr:@deno/gfm@^0.8.0",

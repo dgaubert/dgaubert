@@ -1,6 +1,6 @@
 import MailButton from "@/components/mail-button.tsx";
 import GithubButton from "@/components/github-button.tsx";
-import TwitterButton from "@/components/twitter-button.tsx";
+import BlueskyButton from "@/components/bluesky-button.tsx";
 import LinkedinButton from "@/components/linkedin-button.tsx";
 
 export default function Social() {
@@ -9,7 +9,7 @@ export default function Social() {
       <nav class="px-6 py-8 pt-8">
         <MailButton />
         <GithubButton />
-        <TwitterButton />
+        <BlueskyButton />
         <LinkedinButton />
       </nav>
     </div>
