@@ -6,7 +6,7 @@ import GithubOAuthButton from "@/components/github-oauth-button.tsx";
 import FacebookOAuthButton from "@/components/facebook-oauth-button.tsx";
 import { RequestState } from "@/routes/types.ts"
 
-export default function AboutPage(props: PageProps<undefined, RequestState>) {
+export default function SigninPage(props: PageProps<undefined, RequestState>) {
   const sessionId = props.state.sessionId;
   return (
     <>

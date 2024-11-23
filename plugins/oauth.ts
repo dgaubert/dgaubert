@@ -7,6 +7,8 @@ import {
 import type { Plugin } from "$fresh/server.ts";
 import friends from "@/utils/friends.ts";
 
+const EXPIRE_IN = 30 * 24 * 60 * 60 * 1000 // 30 days in milliseconds
+
 const { signIn: signInGithub, handleCallback: handleCallbackGithub } =
   createHelpers(
     createGitHubOAuthConfig(),
@@ -149,7 +151,7 @@ async function setUserInfo(sessionId: string, email: string) {
     isFriend: friends?.includes(email),
     email: email,
   };
-  await kv.set(key, value);
+  await kv.set(key, value, { expireIn: EXPIRE_IN });
 }
 
 async function getUserInfo(sessionId: string): Promise<UserInfo | null> {
