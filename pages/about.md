@@ -61,5 +61,8 @@ gig: [Stomio](https://stomio.io/). Building a new product from scratch was dope
 as hell. I've been doing mostly backend stuff, but I got my hands dirty on the
 frontend too. Learned a ton about cool frameworks like Vue.js and Tailwind.
 
-Fast forward two awesome years, and now that journey's wrapped up. Currently on
-the lookout for fresh challenges. Keep it locked, folks.
+Finally, in June 2024, I joined [Onum](https://onum.com), a data observability 
+platform that operates in hybrid environments (cloud and on-premises). After more 
+than 10 years of programming primarily in JavaScript runtimes, I switched to the 
+Go language and now lead a small team of young and promising engineers with incredible 
+talent. I couldn’t feel luckier to be part of this new adventure.
