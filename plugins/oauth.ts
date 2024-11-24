@@ -13,6 +13,11 @@ const EXPIRE_IN = 60 * 1000 // 1 minute in milliseconds
 const { signIn: signInGithub, handleCallback: handleCallbackGithub } =
   createHelpers(
     createGitHubOAuthConfig(),
+    {
+      cookieOptions: {
+        expires: Date.now() + EXPIRE_IN
+      } 
+    }
   );
 
 const redirectHost = Deno.env.get("ENVIRONMENT") === "production"
@@ -26,6 +31,11 @@ const { signIn: signInGoogle, handleCallback: handleCallbackGoogle } =
       redirectUri: redirectGoogleUri,
       scope: "https://www.googleapis.com/auth/userinfo.email",
     }),
+    {
+      cookieOptions: {
+        expires: Date.now() + EXPIRE_IN
+      } 
+    }
   );
 
 const redirectFacebookUri = `${redirectHost}/oauth/facebook/callback`;
@@ -35,6 +45,11 @@ const { signIn: signInFacebook, handleCallback: handleCallbackFacebook } =
       redirectUri: redirectFacebookUri,
       scope: "email",
     }),
+    {
+      cookieOptions: {
+        expires: Date.now() + EXPIRE_IN
+      } 
+    }
   );
 
 const { signOut, getSessionId } = createHelpers({
