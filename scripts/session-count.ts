@@ -1,8 +1,10 @@
 /// <reference lib="deno.unstable" />
 
-const siteSessions = [];
+import { UserInfo } from "@/plugins/oauth.ts";
 
-// 79638f4a-856e-4f8f-8a71-e734b09ae10f
+let activeSessions = 0;
+const uniqueSession = new Set<string>()
+
 const databaseId = Deno.env.get("DENO_KV_DATABASE_ID");
 
 if (!databaseId) {
@@ -13,10 +15,13 @@ const kv = await Deno.openKv(
   `https://api.deno.com/databases/${databaseId}/connect`,
 );
 
-const iter = kv.list<string>({ prefix: ["site_sessions"] });
+const iter = kv.list<UserInfo>({ prefix: ["users"] });
 
 for await (const res of iter) {
-  siteSessions.push(res);
+  console.info("key:", res.key[1])
+  activeSessions++;
+  uniqueSession.add(res.value.email)
 }
 
-console.info(`Number of active sessions: ${siteSessions.length}`);
+console.info(`Number of active sessions: ${activeSessions}`);
+console.info(`Number of unique sessions: ${uniqueSession.size}`);

@@ -24,6 +24,7 @@
 - [ ] Pagination (windowed infinite scroll)
 - [ ] Tags
 - [ ] Crossposting: bluesky, twitter, instagram, linkedin
+- [ ] Email when someone logs in
 
 # Content
 

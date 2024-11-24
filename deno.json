@@ -8,7 +8,8 @@
     "build": "GITHUB_CLIENT_ID=fake GITHUB_CLIENT_SECRET=fake FACEBOOK_CLIENT_ID=fake FACEBOOK_CLIENT_SECRET=fake GOOGLE_CLIENT_ID=fake GOOGLE_CLIENT_SECRET=fake deno run -A --unstable-kv dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "session-count": "deno run -A --unstable-kv scripts/session-count.ts"
+    "session-count": "deno run -A --unstable-kv scripts/session-count.ts",
+    "clear-sessions": "deno run -A --unstable-kv scripts/clear-sessions.ts"
   },
   "lint": {
     "rules": {
