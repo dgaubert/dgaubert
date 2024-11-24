@@ -130,6 +130,7 @@ interface UserInfo {
 }
 
 async function syncFriends(friends?: string[]) {
+  console.info("Syncing sessions for friends...")
   const iter = kv.list<UserInfo>({ prefix: ["users"] });
 
   const users = [];
@@ -139,6 +140,7 @@ async function syncFriends(friends?: string[]) {
 
   await Promise.all(users.map((user) => {
     user.value.isFriend = friends ? friends.includes(user.value.email) : false;
+    console.info(`${user.value.email} ${user.value.isFriend ? 'is' : 'is not'} a friend`)
     return kv.set(user.key, user.value);
   }));
 }
@@ -151,6 +153,7 @@ async function setUserInfo(sessionId: string, email: string) {
     isFriend: friends?.includes(email),
     email: email,
   };
+  console.info(`New session created: ${sessionId}, user: ${value.email}, isFriend: ${value.isFriend}`)
   await kv.set(key, value, { expireIn: EXPIRE_IN });
 }
 

@@ -19,4 +19,4 @@ for await (const res of iter) {
   siteSessions.push(res);
 }
 
-console.log(`Number of active sessions: ${siteSessions.length}`);
+console.info(`Number of active sessions: ${siteSessions.length}`);
