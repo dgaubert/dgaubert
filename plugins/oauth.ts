@@ -7,8 +7,7 @@ import {
 import type { Plugin } from "$fresh/server.ts";
 import friends from "@/utils/friends.ts";
 
-// const EXPIRE_IN = 30 * 24 * 60 * 60 * 1000 // 30 days in milliseconds
-const EXPIRE_IN = 60 * 1000 // 1 minute in milliseconds
+const EXPIRE_IN = 30 * 24 * 60 * 60 * 1000 // 30 days in milliseconds
 
 const { signIn: signInGithub, handleCallback: handleCallbackGithub } =
   createHelpers(

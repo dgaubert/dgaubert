@@ -25,6 +25,7 @@
 - [ ] Tags
 - [ ] Crossposting: bluesky, twitter, instagram, linkedin
 - [ ] Email when someone logs in
+- [ ] Review OAuth cookies and session expiration
 
 # Content
 
