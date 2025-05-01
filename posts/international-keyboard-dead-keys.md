@@ -1,7 +1,7 @@
 ---
 title: International keyboard with dead keys 
 published_at: 2025-05-01T12:20:00.000Z
-snippet: Switching from MacOs to Linux is a PITA, this a is handy table To type special characters using the US International keyboard layout with dead keys 
+snippet: Switching from macOS to Linux is a PITA. This is a handy table for typing special characters using the US International keyboard layout with dead keys. 
 private: false
 for_friends_only: false
 draft: false
