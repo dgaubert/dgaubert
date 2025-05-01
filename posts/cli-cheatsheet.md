@@ -9,4 +9,4 @@ draft: false
 type: picture
 ---
 
-A cheatsheet of useful unix CLI programs 
+A cheatsheet of useful unix CLI programs
