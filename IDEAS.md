@@ -18,7 +18,7 @@
 - [x] Replace FRIEND_EMAILS env variable by a file
 - [x] Proper error when no permissions
 - [x] Add media type post
-- [ ] Remove older logging sessions
+- [x] Remove older logging sessions
 - [ ] Refactor (Fresh 2.0)
 - [ ] Allow likes for logged, and comments for fiends
 - [ ] Pagination (windowed infinite scroll)
